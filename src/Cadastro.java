@@ -71,7 +71,7 @@ public class Cadastro
     // refer�ncia do objeto. Caso contr�rio, retorne false
     public Professor consulta(String nome)
     {
-         Professor p;
+        Professor p;
         for (Iterator it = array.iterator(); it.hasNext();){
             p = (Professor) it.next();
             if (p.nome==nome){
@@ -89,6 +89,12 @@ public class Cadastro
     // exce��o.
     public Professor get(int posicao)
     {
+        try{
+        Professor p = (Professor) array.get(posicao);
+        }
+        catch(IndexOutOfBoundsException e){
+            
+        }
         return null;
     }      
     
